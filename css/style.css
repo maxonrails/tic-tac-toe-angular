@@ -1,0 +1,49 @@
+html {
+    background-image: url("../images/background3.jpg");
+}
+
+#board {
+    width: 26em;
+    height: 27em;
+    float: left;
+    margin: 4em 0em 3em 3em;
+    text-align: center;
+}
+
+#scoreBoard {
+  float: left;
+  margin: 132px 0px;
+  height: 396px;
+  width: 118px;
+  border: solid gray;
+}
+
+.square {
+    display: inline-block;
+    width: 8em;
+    height: 8em;
+    border: solid gray;
+    vertical-align: middle;
+}
+
+.house {
+    background-image: url("../images/starks.png");
+    background-size: cover;
+    background-position: center ;
+
+}
+
+p {
+    font-family: "Arial Black", Arial Black, serif;
+    font-size: 20px;
+}
+
+#playerOne, #playerTwo {
+     font-family: "Arial Black", Arial Black, serif;
+     font-size: 10px;
+}
+
+#score {
+    font-family: "Arial Black", Arial Black, serif;
+    font-size: 12px;
+}
