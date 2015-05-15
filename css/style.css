@@ -1,7 +1,19 @@
+@font-face {
+    font-family: GameOfThrones;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/29725/got.ttf);
+}
+
 html {
     background-image: url("../images/background3.jpg");
-    font-family: GameOfThrones, url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29725/got.ttf");
+
+  }
+
+body {
+
+  font-family: GameOfThrones;
+
 }
+
 
 #board {
     width: 26em;
@@ -13,7 +25,7 @@ html {
 
 #scoreBoard {
   float: left;
-  margin: 132px 0px;
+  margin: 129px 0px;
   height: 396px;
   width: 118px;
   border: solid gray;
@@ -28,17 +40,17 @@ html {
 }
 
 p {
-    font-family: "Arial Black", Arial Black, serif;
+
     font-size: 20px;
 }
 
 .score {
-     font-family: "Arial Black", Arial Black, serif;
+
      font-size: 10px;
 }
 
 #score {
-    font-family: "Arial Black", Arial Black, serif;
+
     font-size: 12px;
 }
 

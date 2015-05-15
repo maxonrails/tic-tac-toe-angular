@@ -8,7 +8,7 @@ function tictactoeController(){
     self.playerOneScore = 0;
     self.playerTwoScore = 0;
     self.drawScore = 0;
-    self.message = "Let the GAME of TTT begin!";
+    self.message = "Let the GAME begin!";
     //true will set text to X, false to O
     self.toggle = true;
     //count number of click
@@ -29,11 +29,12 @@ function tictactoeController(){
     ]; //alternate move between X and O
 
     self.placeMove = function(i){
-        console.log(self.message);
-        if(self.message == "Let the GAME of TTT begin!" ||
-           self.message == "Hey I am taken!"){
+
+        if(self.message == "Let the GAME begin!" ||
+           self.message == "This castle is occupied!" ||
+           self.message == "Winter is coming!"){
             if(self.square[i].text !== ""){
-                self.message = "Hey I am taken!";
+                self.message = "This castle is occupied!";
             }else if(self.toggle === true) {
                 self.square[i].text = "X";
                 self.square[i].house = true;
@@ -71,14 +72,14 @@ function tictactoeController(){
 
     };
 
-    //clear all squares, game start over!
+    //clear all squares, game start     over!
     self.newGame = function(){
 
         for(var j= 0; j < self.square.length; j++){
             self.square[j].text ="";
             self.square[j].house = false;
             self.square[j].house2 = false;
-            self.message = "Let the GAME of TTT begin!";
+            self.message = "Winter is coming!";
             self.count = 0;
         }
     };
