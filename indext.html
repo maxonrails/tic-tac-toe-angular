@@ -12,20 +12,22 @@
 
      <div id="board">
             <p id="message" ng-show="tttCtrl.message">{{tttCtrl.message}}</p>
-            <span ng-repeat="ttt in tttCtrl.square">
-                <div class="square" ng-click="tttCtrl.placeMove($index)">{{ttt.text}} </div>
+            <span ng-repeat="ttt in tttCtrl.square" ng-class="{'stark': ttt.stark}">
+                <div class="square" ng-click="tttCtrl.placeMove($index)" ng-class="{'lannister':ttt.lannister}">{{ttt.text}}</div>
             </span>
     </div>
     <div id="scoreBoard">
             <p id="score">Win or Die!</p>
             <hr>
-            <p id="playerOne">Stark</p>
-            <p>{{playerOneScore}}</p>
-            <p id="playerOne">Lannister</p>
-            <p>{{playerTwoScore}}</p>
+            <p class = "score">Stark</p>
+            <p>{{tttCtrl.playerOneScore}}</p>
+            <p class = "score">Lannister</p>
+            <p>{{tttCtrl.playerTwoScore}}</p>
+            <p class ="score">Draw</p>
+            <p>{{tttCtrl.drawScore}}</p>
             <hr>
-            <div id="newGame" ng-click="tttCtrl.newGame">New Game</div>
-            <div id="resetAllScore">Reset All Score</div>
+            <div id="newGame" ng-click="tttCtrl.newGame($index)">New Game</div>
+            <div id="resetAll" ng-click="tttCtrl.resetAll($index)">Reset All Score</div>
     </div>
 
 </body>

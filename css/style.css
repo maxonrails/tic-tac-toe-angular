@@ -26,11 +26,14 @@ html {
     vertical-align: middle;
 }
 
-.house {
+.stark {
     background-image: url("../images/starks.png");
-    background-size: cover;
-    background-position: center ;
+    background-size: 100%;
+}
 
+.lannister {
+    background-image: url("../images/lannister.jpg");
+    background-size: 100%;
 }
 
 p {
@@ -38,7 +41,7 @@ p {
     font-size: 20px;
 }
 
-#playerOne, #playerTwo {
+.score {
      font-family: "Arial Black", Arial Black, serif;
      font-size: 10px;
 }
