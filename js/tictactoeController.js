@@ -17,13 +17,17 @@ function tictactoeController(){
     //setting up 3x3 boxes
     self.square = [
 
-    {text: "" , stark: false, lannister: false} , {text: "", stark: false, lannister: false} , {text: "", stark: false, lannister: false},
-    {text: "" , stark: false, lannister: false} , {text: "", stark: false, lannister: false} , {text: "", stark: false, lannister: false},
-    {text: "" , stark: false, lannister: false} , {text: "", stark: false, lannister: false} , {text: "", stark: false, lannister: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false},
+        {text: "" , house: false, house2: false}
+    ]; //alternate move between X and O
 
-    ];
-
-    //alternate move between X and O
     self.placeMove = function(i){
         console.log(self.message);
         if(self.message == "Let the GAME of TTT begin!" ||
@@ -32,12 +36,13 @@ function tictactoeController(){
                 self.message = "Hey I am taken!";
             }else if(self.toggle === true) {
                 self.square[i].text = "X";
+                self.square[i].house = true;
                 self.square[i].stark = true;
                 self.toggle = false;
                 self.count++;
             }else if(self.toggle === false){
                 self.square[i].text = "O";
-                self.square[i].lannister = true;
+                self.square[i].house2 = true;
                 self.toggle = true;
                 self.count++;
             }
@@ -54,6 +59,7 @@ function tictactoeController(){
 
         if(self.checkWinner( "X" )){
             self.message = "House of Stark win!";
+
             self.playerOneScore++;
         }else if(self.checkWinner("O")){
             self.message = "House of Lannister win!";
@@ -70,6 +76,10 @@ function tictactoeController(){
 
         for(var j= 0; j < self.square.length; j++){
             self.square[j].text ="";
+            self.square[j].house = false;
+            self.square[j].house2 = false;
+            self.message = "Let the GAME of TTT begin!";
+            self.count = 0;
         }
     };
 

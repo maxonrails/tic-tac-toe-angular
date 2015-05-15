@@ -1,5 +1,6 @@
 html {
     background-image: url("../images/background3.jpg");
+    font-family: GameOfThrones, url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29725/got.ttf");
 }
 
 #board {
@@ -26,16 +27,6 @@ html {
     vertical-align: middle;
 }
 
-.stark {
-    background-image: url("../images/starks.png");
-    background-size: 100%;
-}
-
-.lannister {
-    background-image: url("../images/lannister.jpg");
-    background-size: 100%;
-}
-
 p {
     font-family: "Arial Black", Arial Black, serif;
     font-size: 20px;
@@ -49,4 +40,28 @@ p {
 #score {
     font-family: "Arial Black", Arial Black, serif;
     font-size: 12px;
+}
+
+.clear {
+    height: 35px;
+    width: 110px;
+    text-align: center;
+    margin: 1px;
+    border: solid gray;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+.stark {
+
+    background: url("../images/starksmall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.lannister {
+    background: url("../images/lannisterSmall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
