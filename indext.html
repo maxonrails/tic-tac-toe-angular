@@ -2,17 +2,23 @@
 <html>
 <head>
     <title>Tic Tac Toe in AngularJS With Max</title>
+    <!-- css stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- scripts, javascript, angular, firebase -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/angularfire.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/tictactoeController.js"></script>
 
+
 </head>
-<body ng-app="tictactoeApp" ng-controller="tictactoeController as tttCtrl">
+<body ng-app="tictactoeApp" ng-controller="TicTacToeController as tttCtrl">
 
      <div id="board">
-            <p id="message" ng-show="tttCtrl.message">{{tttCtrl.message}}</p>
-                <div ng-repeat="ttt in tttCtrl.square" class="square" ng-click="tttCtrl.placeMove($index)"
+            <p id="message" ng-show="tttCtrl.gameBoard.message">{{tttCtrl.gameBoard.message}}</p>
+                <div ng-repeat="ttt in tttCtrl.gameBoard.squares" class="square" ng-click="tttCtrl.placeMove($index)"
                         ng-class= "{'stark': ttt.house, 'lannister':ttt.house2}">
                 </div>
     </div>
@@ -20,11 +26,11 @@
             <p id="score">Win or Die!</p>
             <hr>
             <p class = "score">Stark</p>
-            <p>{{tttCtrl.playerOneScore}}</p>
+            <p class= "scoreCount">{{tttCtrl.gameBoard.playerOneScore}}</p>
             <p class = "score">Lannister</p>
-            <p>{{tttCtrl.playerTwoScore}}</p>
+            <p class="scoreCount">{{tttCtrl.gameBoard.playerTwoScore}}</p>
             <p class ="score">Draw</p>
-            <p>{{tttCtrl.drawScore}}</p>
+            <p class="scoreCount">{{tttCtrl.gameBoard.drawScore}}</p>
             <hr>
             <div class="clear" ng-click="tttCtrl.newGame($index)">New Game</div>
             <div class="clear" ng-click="tttCtrl.resetAll($index)">Reset All Score</div>

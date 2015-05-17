@@ -46,12 +46,20 @@ p {
 
 .score {
 
-     font-size: 10px;
+     font-size: 12px;
+     padding: 4px 4px 4px 8px;
+
+}
+
+.scoreCount {
+    font-size: 18px;
+    padding-left: 8px;
 }
 
 #score {
 
-    font-size: 12px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .clear {
