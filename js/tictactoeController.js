@@ -7,22 +7,14 @@ TicTacToeController.$inject = ['$firebaseObject'];
 function TicTacToeController($firebaseObject){
 
     var self = this;
-    // self.playerOneScore = 0;
-    // self.playerTwoScore = 0;
-    // self.drawScore = 0;
-    // self.message = "Let the GAME begin!";
-    // //true will set text to X, false to O
-    // self.toggle = true;
-    // //count number of click
-    // self.count = 0;
 
-    //setting up 3x3 boxes
     self.gameBoard = function(){
     var ref = new Firebase("https://tictactoemaxwdi.firebaseio.com");
         var gameBoard = $firebaseObject(ref);
         return gameBoard;
     }();
 
+    //setting up 3x3 boxes
     self.gameBoard.$loaded(function () {
 
         self.resetAll();
@@ -38,10 +30,9 @@ function TicTacToeController($firebaseObject){
         {text: "" , house: false, house2: false},
         {text: "" , house: false, house2: false},
         {text: "" , house: false, house2: false}
-    ] ;//alternate move between X and O
+    ] ;
     self.gameBoard.$save();
     });
-
 
     //to place move between X, O by toggling between X and O;
     self.placeMove = function(i){
@@ -122,7 +113,7 @@ function TicTacToeController($firebaseObject){
 
     };
 
-    //clear all squares, game start     over!
+    //clear all squares, game start over!
     self.newGame = function(){
 
         for(var i= 0; i < self.gameBoard.squares.length; i++){
