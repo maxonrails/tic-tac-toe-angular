@@ -4,12 +4,7 @@
 deployed May 17 5:45pm
 Your Firebase Apps max.thien.tran@gmail.com
 ----------------------------------------------------
-vivid-inferno-5433
-todosfire
-tictactoemaxwdi
-maxt123
-chatapp123929
-button2
+
 ----------------------------------------------------
 Enter the name of the Firebase app you would like to use for hosting
 Firebase app: tictactoemaxwdi
